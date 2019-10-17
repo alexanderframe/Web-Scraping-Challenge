@@ -93,7 +93,7 @@ def scrape():
 
         results = soup.find_all('div', class_='item')
 
-        # Create for loop to get image url and title of all hemispheres
+        # Create for loop to get image url and title of all hemispheres 
 
         for result in results:
                 link = result.find('h3').text

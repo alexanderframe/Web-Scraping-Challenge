@@ -74,25 +74,14 @@
               <h1 class="panel-title">Mars Hemispheres</h1>
             </div>
           <div class="panel-body">
-            <div class="row">
+            <div class="row"></div>
+              <!-- Loop through each hemisphere in mars_data['hemisphere_imgs'] -->
+              {% for hemisphere in mars_data['hemisphere_imgs'] %}
               <div class="col-md-6" style="padding-right: 0px;">
-                <h3 style="text-align: center">{{ mars_data.hemisphere_imgs[0]['title'] }}</h3>
-                <img src={{ mars_data.hemisphere_imgs[0]['img_url']}} class="img-responsive">
-              </div>
-              <div class="col-md-6" style="padding-left: 0px;">
-                <h3 style="text-align: center">{{ mars_data.hemisphere_imgs[1]['title'] }}</h3>
-                <img src={{ mars_data.hemisphere_imgs[1]['img_url']}} class="img-responsive">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6" style="padding-right: 0px;">
-                <h3 style="text-align: center">{{ mars_data.hemisphere_imgs[2]['title'] }}</h3>
-                <img src={{ mars_data.hemisphere_imgs[2]['img_url']}} class="img-responsive">
-              </div>
-              <div class="col-md-6" style="padding-left: 0px;">
-                <h3 style="text-align: center">{{ mars_data.hemisphere_imgs[3]['title'] }}</h3>
-                <img src={{ mars_data.hemisphere_imgs[3]['img_url']}} class="img-responsive">
-              </div>
+                  <h3 style="text-align: center">{{ hemisphere.title }}</h3>
+                  <img src={{ hemisphere.img_url }} class="img-responsive">
+                </div>
+              {% endfor %}
             </div>
           </div>
         </div>
